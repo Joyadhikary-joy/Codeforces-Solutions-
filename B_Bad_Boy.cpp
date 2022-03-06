@@ -51,6 +51,13 @@ bool squre(ll x)
 int main()
 {
    fio;
+   test{
+       ll n,m,i,j,x=0;
+       cin>>n>>m>>i>>j;
+       cout<<"1 1"<<" ";
+       cout<<n<<" "<<m;
+        cout<<endl;
+   }
 
    return 0; 
 }
