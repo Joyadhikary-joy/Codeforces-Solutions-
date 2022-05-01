@@ -38,16 +38,16 @@ typedef vector<vector<long long>> vvll;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
 #define test   \
-     ll t, tc; \
+    int t, tc; \
     cin >> t;  \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
-#define for0(i, n) for (ll i = 0; i < n; i++)
-#define for1(i, n) for (ll i = 1; i <= n; i++)
-#define loop(i, a, b) for (ll i = a; i < b; i++)
-#define for9(i, n) for (ll i = n - 1; i >= 0; i--)
+#define for0(i, n) for (int i = 0; i < n; i++)
+#define for1(i, n) for (int i = 1; i <= n; i++)
+#define loop(i, a, b) for (int i = a; i < b; i++)
+#define for9(i, n) for (int i = n - 1; i >= 0; i--)
 const ll N = 1e9 + 5;
  
 //                                            DEBUG SECTION
@@ -141,5 +141,18 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 int main()
 {
     fio;
+    test{
+        ll a,b,ans=0,step=0,team=0,x=0;
+        cin>>a>>b;
+        if(a==b){
+            cout<<ans<<" "<<step<<endl;
+        }
+        else {
+            ans=abs(a-b);
+            team=a%ans;
+            step=min(team,ans-team);
+            cout<<ans<<" "<<step<<endl;
+        }
+    }
     return 0;
 }
