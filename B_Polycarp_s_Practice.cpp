@@ -141,39 +141,33 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 int main()
 {
     fio;
-    test
+    ll n, k, ans = 0;
+    cin >> n >> k;
+    vector<pair<ll, ll>> v(n);
+    vll idx;
+    for0(i, n)
     {
-        ll n, s, ans = 0, current_sum = 0;
-        cin >> n >> s;
-        ll a[n];
-        for0(i, n)
-        {
-            cin >> a[i];
-        }
-        ll left = 0, right = 0;
-        while (right < n)
-        {
-            current_sum += a[right];
-            right++;
-            while (current_sum > s)
-            {
-                current_sum -= a[left];
-                left++;
-            }
-            if (current_sum == s)
-            {
-                ans = max(ans, right - left);
-            }
-        }
-        if (ans)
-        {
-            cout << n - ans;
-        }
-        else
-        {
-            cout << "-1";
-        }
-        nn;
+        cin >> v[i].first;
+        v[i].second = i + 1;
     }
+    sort(all(v));
+    ll point = n - 1;
+    idx.push_back(0);
+    for0(i, k)
+    {
+        ans += v[point].first;
+        idx.push_back(v[point].second);
+        point--;
+    }
+    cout << ans << endl;
+    sort(all(idx));
+    // debug(v)
+    idx.pop_back();
+    idx.push_back(n);
+    for1(i, idx.size() - 1)
+    {
+        cout << idx[i] - idx[i - 1] << " ";
+    }
+    nn;
     return 0;
 }

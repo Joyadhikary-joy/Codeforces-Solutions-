@@ -143,37 +143,22 @@ int main()
     fio;
     test
     {
-        ll n, s, ans = 0, current_sum = 0;
-        cin >> n >> s;
-        ll a[n];
-        for0(i, n)
+        ll a, b, ans = 0;
+        for0(i, 2)
         {
-            cin >> a[i];
+            cin >> a >> b;
+            if (a == 1)
+                ans++;
+            if (b == 1)
+                ans++;
         }
-        ll left = 0, right = 0;
-        while (right < n)
-        {
-            current_sum += a[right];
-            right++;
-            while (current_sum > s)
-            {
-                current_sum -= a[left];
-                left++;
-            }
-            if (current_sum == s)
-            {
-                ans = max(ans, right - left);
-            }
-        }
-        if (ans)
-        {
-            cout << n - ans;
-        }
+        if (ans == 4)
+            ans = 2;
+        else if (ans == 0)
+            ans = 0;
         else
-        {
-            cout << "-1";
-        }
-        nn;
+            ans = 1;
+        cout << ans << endl;
     }
     return 0;
 }

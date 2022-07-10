@@ -138,42 +138,30 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 }
 // check the type of pair first
 
+void solve (){
+int n, s;
+    cin >> n >> s;
+    int i;
+    int ans = -1;
+    for (i = 0; i < n; i++)
+    {
+        int a, b;
+        cin >> a >> b;
+        if (a < s && b != 0)
+        {
+            ans = max(ans, 100 - b);
+        }
+        if (a <= s)
+        {
+            if (b == 0)
+            {
+                ans = max(ans, 0);
+            }
+        }
+    }
+    cout << ans << "\n";
+}
 int main()
 {
-    fio;
-    test
-    {
-        ll n, s, ans = 0, current_sum = 0;
-        cin >> n >> s;
-        ll a[n];
-        for0(i, n)
-        {
-            cin >> a[i];
-        }
-        ll left = 0, right = 0;
-        while (right < n)
-        {
-            current_sum += a[right];
-            right++;
-            while (current_sum > s)
-            {
-                current_sum -= a[left];
-                left++;
-            }
-            if (current_sum == s)
-            {
-                ans = max(ans, right - left);
-            }
-        }
-        if (ans)
-        {
-            cout << n - ans;
-        }
-        else
-        {
-            cout << "-1";
-        }
-        nn;
-    }
-    return 0;
+    solve();
 }

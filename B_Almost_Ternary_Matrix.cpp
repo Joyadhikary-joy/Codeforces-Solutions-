@@ -1,16 +1,16 @@
 /*
                                ॐ नमः शिवाय
-
+ 
                                  _Karn_
-
-
+ 
+ 
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
-
+ 
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -22,7 +22,7 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
-
+ 
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -37,9 +37,9 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
-#define test  \
-    ll t, tc; \
-    cin >> t; \
+#define test   \
+     ll t, tc; \
+    cin >> t;  \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
@@ -49,14 +49,14 @@ typedef vector<vector<long long>> vvll;
 #define loop(i, a, b) for (ll i = a; i < b; i++)
 #define for9(i, n) for (ll i = n - 1; i >= 0; i--)
 const ll N = 1e9 + 5;
-
+ 
 //                                            DEBUG SECTION
-
+ 
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
     cerr << endl;
-
+ 
 void _print(ll t)
 {
     cerr << t;
@@ -67,7 +67,7 @@ void _print(char t) { cerr << t; }
 void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
-
+ 
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -131,49 +131,16 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
-
+ 
 bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 {
     return (a.second > b.second);
 }
 // check the type of pair first
-
+ 
 int main()
 {
     fio;
-    test
-    {
-        ll n, s, ans = 0, current_sum = 0;
-        cin >> n >> s;
-        ll a[n];
-        for0(i, n)
-        {
-            cin >> a[i];
-        }
-        ll left = 0, right = 0;
-        while (right < n)
-        {
-            current_sum += a[right];
-            right++;
-            while (current_sum > s)
-            {
-                current_sum -= a[left];
-                left++;
-            }
-            if (current_sum == s)
-            {
-                ans = max(ans, right - left);
-            }
-        }
-        if (ans)
-        {
-            cout << n - ans;
-        }
-        else
-        {
-            cout << "-1";
-        }
-        nn;
-    }
+    
     return 0;
 }
