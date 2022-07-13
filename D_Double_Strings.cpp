@@ -141,40 +141,41 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 int main()
 {
     fio;
-    ll n, ans = 0;
-    cin >> n;
-    vll v(n);
-    for0(i, n) cin >> v[i];
-    vll equal;
-    ll idx, idx2, ans2=0;
-    ans += v[0];
-    ans2 += v[n - 1];
-    for (idx = 0, idx2 = n - 1; idx < idx2;)
+    test
     {
-        // debug(ans2);
-        // debug(ans);
-        if (ans2 > ans)
+        ll n;
+        cin >> n;
+        vector<string> s(n);
+        map<string, ll> hash;
+        for0(i, n)
         {
-            idx += 1;
-            ans += v[idx];
+            cin >> s[i];
+            hash[s[i]]++;
         }
-        else if (ans2 == ans)
+        for0(i, n)
         {
-            idx += 1;
-            idx2 -= 1;
-            equal.push_back(ans);
-            ans += v[idx];
-            ans2 += v[idx2];
+            ll x = 0;
+            string left;
+            string right = s[i];
+            for (auto l : s[i])
+            {
+                left += l;
+                right.erase(right.begin() + 0);
+                if (hash[right] && hash[left])
+                {
+                    x = 1;
+                    break;
+                }
+            }
+            if (x)
+                cout << 1;
+            else
+                cout << 0;
+            left.clear();
         }
-        else
-        {
-            idx2 -= 1;
-            ans2 += v[idx2];
-        }
+        nn;
+        hash.clear();
     }
-    // debug(equal);
-    equal.push_back(0);
-    sort(all(equal));
-    cout << equal[equal.size() - 1] << endl;
+
     return 0;
 }

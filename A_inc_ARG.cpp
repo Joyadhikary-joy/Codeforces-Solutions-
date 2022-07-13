@@ -137,44 +137,27 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
     return (a.second > b.second);
 }
 // check the type of pair first
-
+void solve()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int c = 0;
+    int i = 0;
+    while (s[i] != '0' && i < s.size())
+    {
+        i++;
+    }
+    if (i < s.size())
+    {
+        i++;
+    }
+    cout << i << "\n";
+}
 int main()
 {
     fio;
-    ll n, ans = 0;
-    cin >> n;
-    vll v(n);
-    for0(i, n) cin >> v[i];
-    vll equal;
-    ll idx, idx2, ans2=0;
-    ans += v[0];
-    ans2 += v[n - 1];
-    for (idx = 0, idx2 = n - 1; idx < idx2;)
-    {
-        // debug(ans2);
-        // debug(ans);
-        if (ans2 > ans)
-        {
-            idx += 1;
-            ans += v[idx];
-        }
-        else if (ans2 == ans)
-        {
-            idx += 1;
-            idx2 -= 1;
-            equal.push_back(ans);
-            ans += v[idx];
-            ans2 += v[idx2];
-        }
-        else
-        {
-            idx2 -= 1;
-            ans2 += v[idx2];
-        }
-    }
-    // debug(equal);
-    equal.push_back(0);
-    sort(all(equal));
-    cout << equal[equal.size() - 1] << endl;
+    solve();
     return 0;
 }

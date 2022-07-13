@@ -137,44 +137,70 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
     return (a.second > b.second);
 }
 // check the type of pair first
+const ll mod = 1e9 + 7;
+bool solve()
+{
+    ll n, ans = 0, out = 1;
+    cin >> n;
+    vector<ll> a(n), b(n), posa(n + 1), used(n, 0);
+
+    for (ll i = 0; i < n; ++i)
+    {
+        cin >> a[i];
+        posa[a[i]] = i;
+    }
+
+    for (ll i = 0; i < n; ++i)
+    {
+        cin >> b[i];
+    }
+
+    for (ll i = 0; i < n; ++i)
+    {
+        if (used[i])
+            continue;
+        else
+        {
+            ans++;
+            used[i] = 1;
+
+            ll d = b[i];
+
+            ll pos = posa[d];
+
+            while (pos != i)
+            {
+                used[pos] = 1;
+
+                ll d = b[pos];
+                pos = posa[d];
+            }
+        }
+    }
+
+    for (ll i = 0; i < ans; ++i)
+    {
+        out <<= 1;
+        out %= mod;
+    }
+
+    cout << out << endl;
+    return true;
+}
 
 int main()
 {
-    fio;
-    ll n, ans = 0;
-    cin >> n;
-    vll v(n);
-    for0(i, n) cin >> v[i];
-    vll equal;
-    ll idx, idx2, ans2=0;
-    ans += v[0];
-    ans2 += v[n - 1];
-    for (idx = 0, idx2 = n - 1; idx < idx2;)
+    ios_base ::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    ll t = 1;
+    cin >> t;
+
+    while (t--)
     {
-        // debug(ans2);
-        // debug(ans);
-        if (ans2 > ans)
-        {
-            idx += 1;
-            ans += v[idx];
-        }
-        else if (ans2 == ans)
-        {
-            idx += 1;
-            idx2 -= 1;
-            equal.push_back(ans);
-            ans += v[idx];
-            ans2 += v[idx2];
-        }
-        else
-        {
-            idx2 -= 1;
-            ans2 += v[idx2];
-        }
+        solve();
     }
-    // debug(equal);
-    equal.push_back(0);
-    sort(all(equal));
-    cout << equal[equal.size() - 1] << endl;
+
     return 0;
 }
