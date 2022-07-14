@@ -135,7 +135,11 @@ void _print(map<T, V> v)
 int main()
 {
     fio;
+<<<<<<< HEAD
     ll n, max = -100, min = 1000000000, mi, mx, ans = 0;
+=======
+    ll n, max = -1, min = 1000000000, mi, mx, ans = 0;
+>>>>>>> 8th time
     cin >> n;
     vll v(n);
     for0(i, n)
@@ -152,7 +156,10 @@ int main()
             mx = i;
         }
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8th time
     ans = (mx + (n - 1 - mi));
     if (mx > mi)
     {
@@ -160,4 +167,9 @@ int main()
     }
     cout << ans;
     return 0;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 8th time

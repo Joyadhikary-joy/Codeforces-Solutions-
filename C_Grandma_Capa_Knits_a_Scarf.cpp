@@ -1,7 +1,13 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय
 
                                  _Karn_
+=======
+                             🔱  🕉 ॐ नमः शिवाय  🔱
+
+                                 _SPIDER_2.0_
+>>>>>>> 8th time
 
 
 */
@@ -13,7 +19,10 @@ using namespace std;
 
 typedef long long ll;
 typedef long double ld;
+<<<<<<< HEAD
 typedef unsigned long long ull;
+=======
+>>>>>>> 8th time
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef map<ll, ll> ml;
@@ -28,9 +37,14 @@ typedef vector<vector<long long>> vvll;
 #define ss second
 #define pb push_back
 #define eb emplace_back
+<<<<<<< HEAD
 #define pp pop_back
 #define mp make_pair
 #define nn cout << '\n';
+=======
+#define mp make_pair
+#define nn cout << endl;
+>>>>>>> 8th time
 #define NO cout << "NO" << endl;
 #define YES cout << "YES" << endl;
 #define no cout << "No" << endl;
@@ -41,6 +55,10 @@ typedef vector<vector<long long>> vvll;
     int t, tc; \
     cin >> t;  \
     for (tc = 0; tc < t; tc++)
+<<<<<<< HEAD
+=======
+#define deb(a) cerr << "Line " << __LINE__ << " # " << #a << " -> " << a << endl;
+>>>>>>> 8th time
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
@@ -48,6 +66,7 @@ typedef vector<vector<long long>> vvll;
 #define for1(i, n) for (int i = 1; i <= n; i++)
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
+<<<<<<< HEAD
 const ll N = 1e9 + 5;
 
 //                                            DEBUG SECTION
@@ -137,6 +156,9 @@ bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
     return (a.second > b.second);
 }
 // check the type of pair first
+=======
+const ll N = 1e5 + 3;
+>>>>>>> 8th time
 
 int main()
 {
@@ -149,10 +171,17 @@ int main()
         cin >> n;
         string s;
         cin >> s;
+<<<<<<< HEAD
         for0(i, 26)
         {
             char ch = 'a';
             ch += i;
+=======
+        for0(i, 26) // a to z
+        {
+            char ch = 'a';
+            ch += i; // a+2 = c
+>>>>>>> 8th time
             delect = 0;
             ll left = 0, right = n - 1;
             bool found = true;
@@ -178,11 +207,18 @@ int main()
                     break;
                 }
             }
+<<<<<<< HEAD
             if (!found)
             {
             }
             else
                 ans = min(ans, delect);
+=======
+            if (found)
+            {
+                ans = min(ans, delect);
+            }
+>>>>>>> 8th time
         }
         if (ans == N)
         {
@@ -190,6 +226,14 @@ int main()
         }
         cout << ans << endl;
     }
+<<<<<<< HEAD
 
     return 0;
 }
+=======
+    return 0;
+}
+
+// problem link 
+// https://codeforces.com/contest/1582/problem/C
+>>>>>>> 8th time

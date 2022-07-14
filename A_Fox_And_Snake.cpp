@@ -1,7 +1,11 @@
 /*
                                ॐ नमः शिवाय
 
+<<<<<<< HEAD
                                  _Karno_
+=======
+                               _Karn_2.0_
+>>>>>>> 8th time
 
 
 */
@@ -135,16 +139,25 @@ void _print(map<T, V> v)
 int main()
 {
     fio;
+<<<<<<< HEAD
     int n, m, f = 0;
     cin >> n >> m;
     for0(i, n)
     {
         for0(j, m)
+=======
+    int n, m, i, j, flag = 0;
+    cin >> n >> m;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < m; j++)
+>>>>>>> 8th time
         {
             if (i % 2 == 0)
             {
                 cout << "#";
             }
+<<<<<<< HEAD
             else if (i % 2 != 0 && j == m - 1 && f == 0)
             {
                 cout << "#";
@@ -169,3 +182,34 @@ int main()
 
     return 0;
 }
+=======
+            else
+            {
+                if (flag == 0 && j == m - 1)
+                {
+                    cout << "#";
+                }
+                else if (flag == 1 && j == 0)
+                {
+                    cout << "#";
+                }
+                else
+                {
+                    cout << ".";
+                }
+            }
+        }
+        if (i % 2 != 0)
+        {
+            if (flag)
+            {
+                flag = 0;
+            }
+            else
+                flag = 1;
+        }
+        nn;
+    }
+    return 0;
+}
+>>>>>>> 8th time

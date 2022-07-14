@@ -1,6 +1,10 @@
 /*
            HAR HAR MAHADEV
+<<<<<<< HEAD
               _SPIDER_ 
+=======
+              _SPIDER_2.0_
+>>>>>>> 8th time
                                   */
 
 #include <bits/stdc++.h>
@@ -55,6 +59,7 @@ int main()
     fio;
     test
     {
+<<<<<<< HEAD
         int n, even = 0, odd = 0;
         cin >> n;
         for (int i = 0; i < 2 * n; i++)
@@ -75,3 +80,41 @@ int main()
     }
     return 0;
 }
+=======
+        int n, k, l;
+        vi v;
+        cin >> n;
+        int count = 0, sum = 0;
+        for0(i, n)
+        {
+           // count = 0;
+           
+            cin >> k >> l;
+            sum=k+l;
+            if (sum % 2 == 0)
+            {
+                v.pb(1);
+            }
+            else v.pb(0); sum = 0;
+
+        }
+        for(int i=0;i<n;i++)
+        {
+           
+             if(v[i]==1)
+             {
+                 count=1;
+                // break;
+             }
+             // cout<<v[i]<<endl;
+        }
+        if (count==0)
+            cout << "Yes" << endl;
+        else
+            cout << "No" << endl;
+    }
+
+    return 0;
+}//
+//36 95 64 75 62 36 88 25 15 19
+>>>>>>> 8th time

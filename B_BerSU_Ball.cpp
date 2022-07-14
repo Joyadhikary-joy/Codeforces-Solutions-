@@ -1,6 +1,10 @@
 /*
            HAR HAR MAHADEV
+<<<<<<< HEAD
               _SPIDER_ 
+=======
+              _SPIDER_2.0_
+>>>>>>> 8th time
                                   */
 
 #include <bits/stdc++.h>
@@ -40,6 +44,7 @@ typedef vector<vector<long long>> vvll;
 #define for1(i, n) for (int i = 1; i <= n; i++)
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
+<<<<<<< HEAD
 const ll N = 1e5 + 2;
 
 int repeat[N];
@@ -104,3 +109,57 @@ int main()
 
     return 0;
 }
+=======
+
+bool squre(ll x)
+{
+    ll y = round(sqrt(x));
+    if (y * y == x)
+        return 1;
+    else
+        return 0;
+}
+
+const int maxn = 150;
+int n, m, A[maxn], B[maxn];
+int seat[maxn], used[maxn];
+
+bool dfs(int i)
+{
+    for (int j = 1; j <= m; j++)
+        if (!used[j] && abs(A[i] - B[j]) <= 1)
+        {
+            used[j] = 1;
+            if (!seat[j] || dfs(seat[j]))
+            {
+                seat[j] = i;
+                return true;
+            }
+        }
+    return false;
+}
+int main()
+{
+    fio;
+    cin >> n;
+    for1(i, n)
+    {
+        cin >> A[i];
+    }
+    cin >> m;
+    for1(i, m)
+    {
+        cin >> B[i];
+    }
+    int sum = 0;
+    for1(i, n)
+    {
+        memset(used, 0, sizeof(used));
+        if (dfs(i))
+            sum++;
+    }
+    cout << sum << endl;
+
+    return 0;
+}
+>>>>>>> 8th time

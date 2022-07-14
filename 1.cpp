@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
            HAR HAR MAHADEV
               _SPIDER_ 
@@ -79,5 +80,70 @@ int main()
     //fio;
      dd a=1, b=2, c=0.01;
     checkfolsi(a, b,c);
+=======
+#include<bits/stdc++.h>
+using namespace std;
+int32_t main()
+{
+    fastio
+        // cout<<setprecision(20)<<fixed ;
+        int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        vector<int> b(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> b[i];
+        }
+        vector<pair<int, int>> p(n);
+        for (int i = 0; i < n; i++)
+        {
+            p[i] = {a[i], b[i]};
+        }
+        sort(all(a)), sort(all(b));
+        vector<pair<int, int>> ans;
+        bool fail = false;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i; j < n; j++)
+            {
+                if (p[j] == make_pair(a[i], b[i]))
+                {
+                    swap(p[i], p[j]);
+                    if (i != j)
+                    {
+                        ans.emplace_back(i, j);
+                    }
+                    break;
+                }
+            }
+            if (p[i] != make_pair(a[i], b[i]))
+            {
+                fail = true;
+                break;
+            }
+        }
+        if (fail)
+        {
+            cout << -1 << endl;
+        }
+        else
+        {
+            cout << ans.size() << endl;
+            for (auto [x, y] : ans)
+            {
+                cout << x + 1 << " " << y + 1 << endl;
+            }
+        }
+    }
+>>>>>>> 8th time
     return 0;
 }

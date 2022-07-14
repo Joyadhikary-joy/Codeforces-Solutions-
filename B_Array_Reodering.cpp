@@ -2,10 +2,17 @@
            HAR HAR MAHADEV
               _SPIDER_ 
                                   */
+<<<<<<< HEAD
 
 #include <bits/stdc++.h>
 using namespace std;
 
+=======
+ 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+>>>>>>> 8th time
 typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
@@ -16,7 +23,11 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8th time
 #define ff first
 #define ss second
 #define pb push_back
@@ -40,7 +51,11 @@ typedef vector<vector<long long>> vvll;
 #define for1(i, n) for (int i = 1; i <= n; i++)
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8th time
 bool squre(ll x)
 {
     ll y = round(sqrt(x));
@@ -49,7 +64,11 @@ bool squre(ll x)
     else
         return 0;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8th time
 int main()
 {
     test{

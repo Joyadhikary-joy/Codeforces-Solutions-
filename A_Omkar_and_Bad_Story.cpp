@@ -1,6 +1,10 @@
 /*
            HAR HAR MAHADEV
+<<<<<<< HEAD
               _SPIDER_ 
+=======
+              _SPIDER_2.0_
+>>>>>>> 8th time
                                   */
 
 #include <bits/stdc++.h>
@@ -53,6 +57,7 @@ bool squre(ll x)
 int main()
 {
     fio;
+<<<<<<< HEAD
 
     int t;
     cin >> t;
@@ -82,6 +87,54 @@ int main()
                 cout << i << " ";
             }
             cout<<endl;
+=======
+    test
+    {
+
+        ll n, count = 0;
+        cin >> n;
+
+        vll v(n);
+        set<ll> s;
+        for0(i, n)
+        {
+            cin >> v[i];
+            if (v[i] < 0)
+                count = 1;
+            s.insert(v[i]);
+        }
+        ll ans = 1;
+        for (int i = 0; i < v.size() && ans; i++)
+        {
+            for (int j = 0; j < v.size() && ans; j++)
+            {
+                if (i == j)
+                    continue;
+
+                ll x = abs(v[i] - v[j]);
+                if (s.count(x) == 0)
+                {
+                    v.pb(x);
+                    s.insert(x);
+                    if (s.size() > 300)
+                        ans = 0;
+                }
+            }
+        }
+        if (count)
+        {
+            NO;
+        }
+        else
+        {
+            yes;
+            cout << v.size() << endl;
+            for (int k = 0; k < v.size(); k++)
+            {
+                cout << v[k] << " ";
+            }
+            cout << endl;
+>>>>>>> 8th time
         }
     }
 

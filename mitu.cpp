@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+<<<<<<< HEAD
 using namespace std;
 int main()
 {
@@ -38,4 +39,48 @@ int main()
     cout << "So the comments which has been removed ==>>";
     cout << comment<<" " ;
     return 0;
+=======
+    using namespace std;
+bool check(char ch)
+{
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '_')
+        return true;
+    return false;
+}
+bool check1(char ch)
+{
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9') || ch == '_')
+        return true;
+    return false;
+}
+int main()
+{
+    string str;
+
+    while (cin >> str)
+    {
+
+        int flag = 0;
+        int n = str.length();
+        if (check(str.front()) == true)
+        {
+            flag = 1;
+            for (int i = 1; i < n; i++)
+            {
+
+                if (check1(str[i]) == true)
+                    flag = 1;
+                else
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+        }
+        if (flag)
+            cout << str << " is a valid identifier" << endl;
+        else
+            cout << str << " is invalid" << endl;
+    }
+>>>>>>> 8th time
 }

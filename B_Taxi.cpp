@@ -1,7 +1,13 @@
 /*
+<<<<<<< HEAD
                              🔱  ॐ नमः शिवाय  🔱
 
                                     _SPIDER_
+=======
+                             🔱  🕉 ॐ नमः शिवाय  🔱
+
+                                 _SPIDER_2.0_
+>>>>>>> 8th time
 
 
 */
@@ -52,6 +58,7 @@ const ll N = 1e5 + 3;
 int main()
 {
     fio;
+<<<<<<< HEAD
     ll n, x = 0, y = 0, z = 0, count = 0;
     cin >> n;
     int arr[n + 1];
@@ -112,3 +119,20 @@ int main()
     cout << count;
     return 0;
 }
+=======
+    ll n, x = 0, arr[N];
+    cin >> n;
+    for0(i, n)
+    {
+        cin >> arr[i];
+        x += arr[i];
+    }
+    int s = x / 4;
+    if (x % 4 == 0)
+        cout << x / 4;
+    else
+        cout << s + 1;
+        
+    return 0;
+}
+>>>>>>> 8th time

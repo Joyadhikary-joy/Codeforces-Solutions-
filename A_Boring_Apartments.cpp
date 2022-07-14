@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय
 
                                  _Karno_
@@ -9,11 +10,21 @@
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
+=======
+                           HAR HAR MAHADEV
+                            _SPIDER_2.0_
+                                                            */
+
+#include <bits/stdc++.h>
+>>>>>>> 8th time
 using namespace std;
 
 typedef long long ll;
 typedef long double ld;
+<<<<<<< HEAD
 typedef unsigned long long ull;
+=======
+>>>>>>> 8th time
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef map<ll, ll> ml;
@@ -23,14 +34,22 @@ typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
 
+<<<<<<< HEAD
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
+=======
+>>>>>>> 8th time
 #define ff first
 #define ss second
 #define pb push_back
 #define eb emplace_back
+<<<<<<< HEAD
 #define pp pop_back
 #define mp make_pair
 #define nn cout << '\n';
+=======
+#define mp make_pair
+#define nn cout << endl;
+>>>>>>> 8th time
 #define NO cout << "NO" << endl;
 #define YES cout << "YES" << endl;
 #define no cout << "No" << endl;
@@ -41,6 +60,10 @@ typedef vector<vector<long long>> vvll;
     int t, tc; \
     cin >> t;  \
     for (tc = 0; tc < t; tc++)
+<<<<<<< HEAD
+=======
+#define deb(a) cerr << "Line " << __LINE__ << " # " << #a << " -> " << a << endl;
+>>>>>>> 8th time
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
@@ -48,6 +71,7 @@ typedef vector<vector<long long>> vvll;
 #define for1(i, n) for (int i = 1; i <= n; i++)
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
+<<<<<<< HEAD
 const ll N = 1e5 + 3;
 
 //                                            DEBUG SECTION
@@ -131,10 +155,14 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
+=======
+//const ll N=1e5+3;
+>>>>>>> 8th time
 
 int main()
 {
     fio;
+<<<<<<< HEAD
     test{
     ll ans = 0, n, sum = 0, max = 0;
     string s;
@@ -147,3 +175,21 @@ int main()
     nn;
     }
 }
+=======
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        string s;
+        cin >> s;
+        int ans, x;
+        x = s[0] - '0';
+        int n = s.size();
+        ans = (x - 1) * 10;
+        ans += (n * (n + 1)) / 2;
+        cout << ans << endl;
+    }
+    
+    return 0;
+}
+>>>>>>> 8th time
