@@ -1,7 +1,7 @@
 /*
                                ॐ नमः शिवाय
 
-                                 _Karno_
+                                 _Karn_
 
 
 */
@@ -37,18 +37,18 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
-#define test   \
-    int t, tc; \
-    cin >> t;  \
+#define test  \
+    ll t, tc; \
+    cin >> t; \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
-#define for0(i, n) for (int i = 0; i < n; i++)
-#define for1(i, n) for (int i = 1; i <= n; i++)
-#define loop(i, a, b) for (int i = a; i < b; i++)
-#define for9(i, n) for (int i = n - 1; i >= 0; i--)
-const ll N = 1e5 + 3;
+#define for0(i, n) for (ll i = 0; i < n; i++)
+#define for1(i, n) for (ll i = 1; i <= n; i++)
+#define loop(i, a, b) for (ll i = a; i < b; i++)
+#define for9(i, n) for (ll i = n - 1; i >= 0; i--)
+const ll N = 1e9 + 5;
 
 //                                            DEBUG SECTION
 
@@ -132,26 +132,49 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
+bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
+{
+    return (a.second > b.second);
+}
+// check the type of pair first
 void solve()
 {
-    ll n;
+    int n, z;
     cin >> n;
-    vector<ll> a(n + 5);
-    for1(i, n) cin >> a[i];
-    ll ans = 0;
-    for1(i, n)
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    for (int i = 0; i < n; i++)
     {
-        ll res = 0;
-        for (int j = i; j <= n; ++j)
+        cin >> z;
+        a[i] = z - a[i];
+    }
+    int p = 0;
+    int q = n - 1;
+    while (p <= q && a[p] == 0)
+        p++;
+    while (p <= q && a[q] == 0)
+        q--;
+    if (p > q)
+    {
+        YES;
+    }
+    else
+    {
+        bool ok = a[p] > 0;
+        for (int i = p; i <= q; i++)
+            ok &= a[i] == a[p];
+        if (ok)
         {
-            res++;
-            if (a[j] == 0)
-                res++;
-            ans += res;
+            YES;
+        }
+        else
+        {
+            NO;
         }
     }
-    cout << ans << endl;
 }
+
 int main()
 {
     fio;

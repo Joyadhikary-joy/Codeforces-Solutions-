@@ -1,7 +1,7 @@
 /*
                                ॐ नमः शिवाय
 
-                                 _Karno_
+                                 _Karn_
 
 
 */
@@ -37,18 +37,18 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
-#define test   \
-    int t, tc; \
-    cin >> t;  \
+#define test  \
+    ll t, tc; \
+    cin >> t; \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
-#define for0(i, n) for (int i = 0; i < n; i++)
-#define for1(i, n) for (int i = 1; i <= n; i++)
-#define loop(i, a, b) for (int i = a; i < b; i++)
-#define for9(i, n) for (int i = n - 1; i >= 0; i--)
-const ll N = 1e5 + 3;
+#define for0(i, n) for (ll i = 0; i < n; i++)
+#define for1(i, n) for (ll i = 1; i <= n; i++)
+#define loop(i, a, b) for (ll i = a; i < b; i++)
+#define for9(i, n) for (ll i = n - 1; i >= 0; i--)
+const ll N = 1e9 + 5;
 
 //                                            DEBUG SECTION
 
@@ -132,32 +132,36 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
-void solve()
+bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 {
-    ll n;
-    cin >> n;
-    vector<ll> a(n + 5);
-    for1(i, n) cin >> a[i];
-    ll ans = 0;
-    for1(i, n)
-    {
-        ll res = 0;
-        for (int j = i; j <= n; ++j)
-        {
-            res++;
-            if (a[j] == 0)
-                res++;
-            ans += res;
-        }
-    }
-    cout << ans << endl;
+    return (a.second > b.second);
 }
+// check the type of pair first
+
 int main()
 {
     fio;
     test
     {
-        solve();
+        ll n;
+        cin >> n;
+        vll v(n);
+        for0(i, n)
+        {
+            cin >> v[i];
+        }
+        bool ok = true, ok2 = true;
+        for0(i, n)
+        {
+            if (v[i] % v[0] != 0)
+                ok2 = false;
+        }
+        if (ok2)
+        {
+            YES;
+        }
+        else
+            NO;
     }
     return 0;
 }

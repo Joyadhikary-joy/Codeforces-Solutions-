@@ -1,7 +1,7 @@
 /*
                                ॐ नमः शिवाय
 
-                                 _Karno_
+                                 _Karn_
 
 
 */
@@ -37,18 +37,18 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
-#define test   \
-    int t, tc; \
-    cin >> t;  \
+#define test  \
+    ll t, tc; \
+    cin >> t; \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
-#define for0(i, n) for (int i = 0; i < n; i++)
-#define for1(i, n) for (int i = 1; i <= n; i++)
-#define loop(i, a, b) for (int i = a; i < b; i++)
-#define for9(i, n) for (int i = n - 1; i >= 0; i--)
-const ll N = 1e5 + 3;
+#define for0(i, n) for (ll i = 0; i < n; i++)
+#define for1(i, n) for (ll i = 1; i <= n; i++)
+#define loop(i, a, b) for (ll i = a; i < b; i++)
+#define for9(i, n) for (ll i = n - 1; i >= 0; i--)
+const ll N = 1e9 + 5;
 
 //                                            DEBUG SECTION
 
@@ -132,32 +132,63 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
+bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
+{
+    return (a.second > b.second);
+}
+// check the type of pair first
+
 void solve()
 {
-    ll n;
+    ll n, i, j, ct = 1, res = 0, sum = 0, ans = 0;
     cin >> n;
-    vector<ll> a(n + 5);
-    for1(i, n) cin >> a[i];
-    ll ans = 0;
-    for1(i, n)
+    ll a[n + 1];
+    vector<int> V;
+    V.pb(0);
+    set<int> S;
+    map<int, int> mp;
+    for (i = 1; i <= n; i++)
     {
-        ll res = 0;
-        for (int j = i; j <= n; ++j)
+        cin >> a[i];
+        if (a[i] > 0 and mp[a[i]] == 0)
         {
-            res++;
-            if (a[j] == 0)
-                res++;
-            ans += res;
+            S.insert(a[i]);
+            mp[a[i]] = 1;
+        }
+        else if (a[i] > 0)
+        {
+            cout << -1 << endl;
+            return;
+        }
+        else if (a[i] < 0)
+        {
+            if (mp[-a[i]] == 0)
+            {
+                cout << -1 << endl;
+                return;
+            }
+            S.erase(-a[i]);
+            if (S.empty())
+            {
+                V.pb(i);
+                mp.clear();
+            }
         }
     }
-    cout << ans << endl;
+    if (!S.empty())
+        cout << -1 << endl;
+    else
+    {
+        cout << V.size() - 1 << endl;
+        for (i = 1; i < V.size(); i++)
+            cout << V[i] - V[i - 1] << " ";
+        cout << endl;
+    }
 }
+
 int main()
 {
     fio;
-    test
-    {
-        solve();
-    }
+    solve();
     return 0;
 }
