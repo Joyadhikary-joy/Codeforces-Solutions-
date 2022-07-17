@@ -1,7 +1,13 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय
 
                                  _Karno_
+=======
+                               ॐ नमः शिवाय  
+
+                               _Karn_2.0_
+>>>>>>> 8th time
 
 
 */
@@ -37,10 +43,17 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
+<<<<<<< HEAD
 #define test   \
     int t, tc; \
     cin >> t;  \
     for (tc = 0; tc < t; tc++)
+=======
+#define test \
+  int t, tc; \
+  cin >> t;  \
+  for (tc = 0; tc < t; tc++)
+>>>>>>> 8th time
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
@@ -52,6 +65,7 @@ const ll N = 1e5 + 3;
 
 //                                            DEBUG SECTION
 
+<<<<<<< HEAD
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
@@ -61,6 +75,14 @@ void _print(ll t)
 {
     cerr << t;
 }
+=======
+#define debug(a)                                           \
+  cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
+  _print(a);                                               \
+  cerr << endl;
+
+void _print(ll t) { cerr << t; }
+>>>>>>> 8th time
 void _print(int t) { cerr << t; }
 void _print(string t) { cerr << t; }
 void _print(char t) { cerr << t; }
@@ -132,6 +154,7 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
+<<<<<<< HEAD
 int main()
 {
     fio;
@@ -165,4 +188,12 @@ int main()
         }
     }
     return 0;
+=======
+
+int main()
+{
+  fio;
+
+  return 0;
+>>>>>>> 8th time
 }

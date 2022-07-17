@@ -1,16 +1,28 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय  
  
                                  _Karno_
  
  
+=======
+                             🔱  ॐ नमः शिवाय  🔱
+
+                               _SPIDER_2.0_
+
+
+>>>>>>> 8th time
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -22,7 +34,11 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -49,14 +65,24 @@ typedef vector<vector<long long>> vvll;
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
 const ll N = 1e5 + 3;
+<<<<<<< HEAD
  
 //                                            DEBUG SECTION
  
+=======
+
+//                                            DEBUG SECTION
+
+>>>>>>> 8th time
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
     cerr << endl;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 void _print(ll t)
 {
     cerr << t;
@@ -67,7 +93,11 @@ void _print(char t) { cerr << t; }
 void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -131,6 +161,7 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
+<<<<<<< HEAD
 // 1 2 3 4 5 6 7
 int main()
 {
@@ -156,6 +187,27 @@ int main()
             }
             else NO;
         }
+=======
+
+int main()
+{
+    test
+    {
+        fio;
+        int l, r, k, ans = 0;
+        cin >> l >> r >> k;
+        vll vec;
+        for (ll i = l; i <= r; i ++)
+        {
+             vec.push_back(i);
+        }
+        int i=0;
+        while(k--){
+              ans=vec[i]*vec[i+1];
+              
+        }
+       
+>>>>>>> 8th time
     }
     return 0;
 }

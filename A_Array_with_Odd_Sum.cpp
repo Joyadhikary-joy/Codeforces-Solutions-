@@ -1,16 +1,16 @@
 /*
                                ॐ नमः शिवाय
- 
-                                 _Karn_
- 
- 
+
+                               _Karn_2.0_
+
+
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
- 
+
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -22,7 +22,7 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
- 
+
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -38,25 +38,25 @@ typedef vector<vector<long long>> vvll;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
 #define test   \
-     ll t, tc; \
+    int t, tc; \
     cin >> t;  \
     for (tc = 0; tc < t; tc++)
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) (a * (b / __gcd(a, b)))
-#define for0(i, n) for (ll i = 0; i < n; i++)
-#define for1(i, n) for (ll i = 1; i <= n; i++)
-#define loop(i, a, b) for (ll i = a; i < b; i++)
-#define for9(i, n) for (ll i = n - 1; i >= 0; i--)
-const ll N = 1e9 + 5;
- 
+#define for0(i, n) for (int i = 0; i < n; i++)
+#define for1(i, n) for (int i = 1; i <= n; i++)
+#define loop(i, a, b) for (int i = a; i < b; i++)
+#define for9(i, n) for (int i = n - 1; i >= 0; i--)
+const ll N = 1e5 + 3;
+
 //                                            DEBUG SECTION
- 
+
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
     cerr << endl;
- 
+
 void _print(ll t)
 {
     cerr << t;
@@ -67,7 +67,7 @@ void _print(char t) { cerr << t; }
 void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
- 
+
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -131,15 +131,37 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
- 
-bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
-{
-    return (a.second > b.second);
-}
-// check the type of pair first
- 
+
 int main()
 {
     fio;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        ll n, dx = 0, idx = 0,f=0;
+        cin >> n;
+        vll v(n);
+        for0(i, n)
+        {
+            cin >> v[i];
+            if (v[i] & 1)
+            {
+                idx++;
+            }
+            else
+                dx++;
+        }
+        if(idx){
+            if(idx==n && n%2==0){
+                f=0;
+            }
+            else f=1;
+        }
+        if(f){
+           YES;
+        }
+        else NO;
+    }
     return 0;
 }

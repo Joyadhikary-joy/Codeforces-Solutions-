@@ -1,7 +1,13 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय
 
                                  _Karn_
+=======
+                               ॐ नमः शिवाय  
+
+                               _Karn_2.0_
+>>>>>>> 8th time
 
 
 */
@@ -29,7 +35,11 @@ typedef vector<vector<long long>> vvll;
 #define pb push_back
 #define eb emplace_back
 #define pp pop_back
+<<<<<<< HEAD
 #define mp make_pair
+=======
+#define mpp make_pair
+>>>>>>> 8th time
 #define nn cout << '\n';
 #define NO cout << "NO" << endl;
 #define YES cout << "YES" << endl;
@@ -37,6 +47,7 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
+<<<<<<< HEAD
 #define test  \
     ll t, tc; \
     cin >> t; \
@@ -48,10 +59,24 @@ typedef vector<vector<long long>> vvll;
 #define for1(i, n) for (ll i = 1; i <= n; i++)
 #define loop(i, a, b) for (ll i = a; i < b; i++)
 #define for9(i, n) for (ll i = n - 1; i >= 0; i--)
+=======
+#define test \
+  int t, tc; \
+  cin >> t;  \
+  for (tc = 0; tc < t; tc++)
+#define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define gcd(a, b) __gcd(a, b)
+#define lcm(a, b) (a * (b / __gcd(a, b)))
+#define for0(i, n) for (long long i = 0; i < n; i++)
+#define for1(i, n) for (long long i = 1; i <= n; i++)
+#define loop(i, a, b) for (long long i = a; i < b; i++)
+#define for9(i, n) for (long long  i = n - 1; i >= 0; i--)
+>>>>>>> 8th time
 const ll N = 1e9 + 5;
 
 //                                            DEBUG SECTION
 
+<<<<<<< HEAD
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
@@ -61,6 +86,14 @@ void _print(ll t)
 {
     cerr << t;
 }
+=======
+#define debug(a)                                           \
+  cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
+  _print(a);                                               \
+  cerr << endl;
+
+void _print(ll t) { cerr << t; }
+>>>>>>> 8th time
 void _print(int t) { cerr << t; }
 void _print(string t) { cerr << t; }
 void _print(char t) { cerr << t; }
@@ -132,6 +165,7 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
+<<<<<<< HEAD
 bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 {
     return (a.second > b.second);
@@ -177,4 +211,16 @@ int main()
         cout << ans1 << endl;
     }
     return 0;
+=======
+bool sortbysec(const pair<string,ll> &a, const pair<string ,ll> &b)
+{
+    return (a.second > b.second);
+}
+// check the type of pair first 
+
+int main()
+{
+  fio;
+  return 0;
+>>>>>>> 8th time
 }

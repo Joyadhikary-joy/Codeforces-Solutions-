@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
                                ॐ नमः शिवाय
 
@@ -6,6 +7,17 @@
 
 */
 #include <bits/stdc++.h>
+=======
+/* 
+                            ॐ नमो नारायणाय
+
+                            ॐ नमः शिवाय  
+
+                            _Karn_2.0_
+                               
+*/
+#include<bits/stdc++.h>
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
@@ -23,13 +35,22 @@ typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
 #define pb push_back
 #define eb emplace_back
 #define pp pop_back
+<<<<<<< HEAD
 #define mp make_pair
+=======
+#define mpp make_pair
+
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 #define nn cout << '\n';
 #define NO cout << "NO" << endl;
 #define YES cout << "YES" << endl;
@@ -37,6 +58,7 @@ typedef vector<vector<long long>> vvll;
 #define yes cout << "Yes" << endl;
 #define all(x) (x).begin(), (x).end()
 #define Sort(s) sort(s.begin(), s.end())
+<<<<<<< HEAD
 #define test  \
     ll t, tc; \
     cin >> t; \
@@ -61,6 +83,9 @@ void _print(ll t)
 {
     cerr << t;
 }
+=======
+
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 void _print(int t) { cerr << t; }
 void _print(string t) { cerr << t; }
 void _print(char t) { cerr << t; }
@@ -68,6 +93,12 @@ void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
 
+<<<<<<< HEAD
+=======
+ 
+
+
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -132,6 +163,7 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 
+<<<<<<< HEAD
 bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
 {
     return (a.second > b.second);
@@ -164,4 +196,16 @@ int main()
     fio;
     solve();
     return 0;
+=======
+bool sortbysec(const pair<string,ll> &a, const pair<string ,ll> &b)
+{
+    return (a.second > b.second);
+}
+// check the type of pair first 
+
+int main()
+{
+  return 0;
+
+>>>>>>> c6032e10ce4ac23cb4d2ebc7b94c78b9edb4d187
 }

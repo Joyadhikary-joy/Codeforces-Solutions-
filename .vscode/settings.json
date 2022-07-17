@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "competitive-programming-helper.firstTime": false,
     "files.associations": {
         "iosfwd": "cpp",
@@ -72,4 +73,36 @@
         "string_view": "cpp"
     },
     "C_Cpp.dimInactiveRegions": false
+=======
+    "files.associations": {
+        "ostream": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "random": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "sstream": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "set": "cpp",
+        "complex": "cpp",
+        "algorithm": "cpp",
+        "fstream": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "numeric": "cpp",
+        "iomanip": "cpp"
+    }
+>>>>>>> 8th time
 }

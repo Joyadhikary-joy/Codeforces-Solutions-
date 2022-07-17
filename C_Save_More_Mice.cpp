@@ -1,16 +1,27 @@
 /*
                              🔱  🕉 ॐ नमः शिवाय  🔱
+<<<<<<< HEAD
  
                                  _SPIDER_2.0_
  
  
+=======
+
+                                 _SPIDER_2.0_
+
+
+>>>>>>> 8th time
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
@@ -21,7 +32,11 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -48,7 +63,11 @@ typedef vector<vector<long long>> vvll;
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
 //const ll N=1e5+3;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 int main()
 {
     fio;
@@ -62,12 +81,21 @@ int main()
             cin >> ar[i];
         }
         sort(ar, ar + k);
+<<<<<<< HEAD
         int x = n / 2, rem = 0, count = 0,cat_position=0;
         for9(i, k)
         {
             if(ar[i]>cat_position)
             {
                 cat_position=n-ar[i]+cat_position;
+=======
+        int x = n / 2, rem = 0, count = 0;
+        for9(i, k)
+        {
+            if (ar[i] > rem)
+            {
+                rem = (n - ar[i]) + rem;
+>>>>>>> 8th time
                 count++;
             }
             else

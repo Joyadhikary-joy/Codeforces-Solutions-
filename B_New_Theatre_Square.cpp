@@ -1,16 +1,28 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय  
  
                                  _Karno_
  
  
+=======
+                               ॐ नमः शिवाय
+
+                               _Karn_2.0_
+
+
+>>>>>>> 8th time
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -22,7 +34,11 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -49,15 +65,25 @@ typedef vector<vector<long long>> vvll;
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
 const ll N = 1e5 + 3;
+<<<<<<< HEAD
 long long ans=0,sum=0,a,b,c,x,p,m,sum1=0;
  
 //                                            DEBUG SECTION
  
+=======
+
+//                                            DEBUG SECTION
+
+>>>>>>> 8th time
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
     cerr << endl;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 void _print(ll t)
 {
     cerr << t;
@@ -68,7 +94,11 @@ void _print(char t) { cerr << t; }
 void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -132,9 +162,81 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
+<<<<<<< HEAD
  
 int main()
 {
     fio;
+=======
+
+bool sortbysec(const pair<string, ll> &a, const pair<string, ll> &b)
+{
+    return (a.second > b.second);
+}
+// check the type of pair first
+
+int main()
+{
+    fio;
+    test
+    {
+        ll n, m, x, y, p = 0, c = 0, ans = 0;
+        cin >> n >> m >> x >> y;
+        char a[n + 4][m + 4];
+        for0(i, n)
+        {
+            for0(j, m)
+            {
+                cin >> a[i][j];
+            }
+        }
+        /*for0(i, n)
+        {
+            for0(j, m)
+            {
+               if (a[i][j] == '.')
+                {
+                    if (a[i][j] == a[i][j + 1])
+                    {
+                        p++;
+                        j++;
+                    }
+                    else if (a[i][j] != a[i][j + 1])
+                    {
+                        c++;
+                    }
+                } 
+            }
+        } */
+         for0(i, n)
+        {
+            for0(j, m)
+            {
+            if(a[i][j]=='.' && a[i][j+1]=='.'){
+                  a[i][j]='x';
+                  a[i][j+1]='x';
+                  p++;
+                }
+            }
+        }
+        for0(i,n){
+            for0(j,m){
+                if(a[i][j]=='.'){
+                    c++;
+                }
+            }
+        } 
+        if (y <= 2 * x)
+        {
+            ans = y * p + c * x;
+            cout << ans << endl;
+        }
+        else
+        {
+            ans = c * x + (2 * p * x);
+            cout << ans << endl;
+        }
+    }
+>>>>>>> 8th time
     return 0;
 }

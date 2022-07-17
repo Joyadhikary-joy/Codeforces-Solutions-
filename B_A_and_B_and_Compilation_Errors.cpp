@@ -1,16 +1,28 @@
 /*
+<<<<<<< HEAD
                                ॐ नमः शिवाय  
  
                                  _Karno_
  
  
+=======
+                               ॐ नमः शिवाय
+
+                               _Karn_2.0_
+
+
+>>>>>>> 8th time
 */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -22,7 +34,11 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<vector<int>> vvi;
 typedef vector<vector<long long>> vvll;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 #define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ff first
 #define ss second
@@ -49,14 +65,24 @@ typedef vector<vector<long long>> vvll;
 #define loop(i, a, b) for (int i = a; i < b; i++)
 #define for9(i, n) for (int i = n - 1; i >= 0; i--)
 const ll N = 1e5 + 3;
+<<<<<<< HEAD
  
 //                                            DEBUG SECTION
  
+=======
+
+//                                            DEBUG SECTION
+
+>>>>>>> 8th time
 #define debug(a)                                             \
     cerr << "Line " << __LINE__ << " ## " << #a << " -->> "; \
     _print(a);                                               \
     cerr << endl;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 void _print(ll t)
 {
     cerr << t;
@@ -67,7 +93,11 @@ void _print(char t) { cerr << t; }
 void _print(ld t) { cerr << t; }
 void _print(double t) { cerr << t; }
 void _print(ull t) { cerr << t; }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8th time
 template <class T, class V>
 void _print(pair<T, V> p);
 template <class T>
@@ -131,10 +161,68 @@ void _print(map<T, V> v)
     }
     cerr << "]";
 }
+<<<<<<< HEAD
  
 int main()
 {
     fio;
     
+=======
+
+int main()
+{
+    fio;
+    ll n, fx = 0, sx = 0,sum1=0,sum2=0,sum3=0;
+    cin >> n;
+    vll v1(n), v2(n - 1), v3(n - 2);
+    for0(i, n)
+    {
+        cin >> v1[i];
+        sum1+=v1[i];
+    }
+    for0(i, n - 1)
+    {
+        cin >> v2[i];
+        sum2+=v2[i];
+    }
+    for0(i, n - 2)
+    {
+        cin >> v3[i];
+        sum3+=v3[i];
+    }
+    /* sort(all(v1));
+    sort(all(v2));
+    sort(all(v3));
+    for0(i, n - 1)
+    {
+        if (v1[i] != v2[i])
+        {
+            fx = v1[i];
+            break;
+        }
+    }
+    if (fx == 0)
+    {
+        fx = v1[n - 1];
+    }
+    for0(i, n - 2)
+    {
+        if (v2[i] != v3[i])
+        {
+            sx = v2[i];
+            break;
+        }
+    }
+    if (sx == 0)
+    {
+        sx = v2[n - 2];
+    }
+
+    */
+   fx=abs(sum1-sum2);
+   sx=abs(sum2-sum3);
+    cout << fx << endl;
+    cout << sx << endl;
+>>>>>>> 8th time
     return 0;
 }
